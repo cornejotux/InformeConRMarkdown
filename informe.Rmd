@@ -1,0 +1,69 @@
+---
+title: "Informe con RMarkdown"
+author: "Jorge Cornejo"
+date: "`r Sys.Date()`"
+#output:
+#  pdf_document: default
+#  html_document: default
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    lof: true
+    lot: true
+  pdf:
+    toc: true
+    toc-depth: 3
+    lof: true
+    lot: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(message = FALSE)
+knitr::opts_chunk$set(warning = FALSE)
+```
+
+```{r}
+require(dplyr)
+require(ggplot2)
+require(kableExtra)
+```
+
+# Informe de como crear informes
+
+Este *documento* es un ejemplo creato en tiempo real, demostrando como usar **RMarkdown** para crear un informe.
+
+## Análisis de barcos en ZEE de Isla de Pascua
+
+```{r}
+datos <- read.csv(file="data/public-global-presence-v3.0.csv")
+
+```
+
+```{r}
+
+banderaYtipo <- datos %>% 
+  group_by(Flag,Vessel.Type) %>% 
+  summarise(totHours = sum(Vessel.Presence.Hours, na.rm=T))
+
+```
+
+Esta es una tabla resumen de las horas de presencia de embarcaciones por pais y tipo,
+
+```{r}
+kable(banderaYtipo)
+```
+
+### Ahora creamos una figura o gráfico
+
+```{r grafico, out.width = '100%', fig.align = 'center', fig.cap = 'Horas de presencia de embarcaciones por pais y tipo.'}
+
+ggplot(data=banderaYtipo) +
+  geom_bar(aes(x=Flag, y=totHours), stat="identity") +
+  ylab("Horas Totales") + xlab("Bandera") +
+  theme_bw() +
+  theme(axis.text.x = element_text(angle = 75, vjust = 0.9, hjust=1)) +
+  facet_wrap(~Vessel.Type)
+
+```
