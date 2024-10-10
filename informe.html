@@ -92,18 +92,21 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="informe-de-como-crear-informes" class="level1">
 <h1>Informe de como crear informes</h1>
-<p>Este <em>documento</em> es un ejemplo creato en tiempo real, demostrando como usar <strong>RMarkdown</strong> para crear un informe.</p>
+<p>Este <em>documento</em> es un ejemplo creado en tiempo real, demostrando como usar <strong>RMarkdown</strong> para crear un informe.</p>
 <section id="análisis-de-barcos-en-zee-de-isla-de-pascua" class="level2">
 <h2 class="anchored" data-anchor-id="análisis-de-barcos-en-zee-de-isla-de-pascua">Análisis de barcos en ZEE de Isla de Pascua</h2>
-<p>Esta es una tabla resumen de las horas de presencia de embarcaciones por pais y tipo,</p>
+<p>Aquí se debe ir a descargar los datos desde Global Fishing Watch (https://globalfishingwatch.org/map).</p>
+<p>En esta sección se hace un resumen de las horas de presencia de embarcaciones por país (<code>Flag</code>) y tipo de embarcación (<code>Vessel.type</code>).</p>
+<p>Esta es una tabla resumen de las horas de presencia de embarcaciones por país y tipo,</p>
 <div class="cell">
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
+<caption>Tabla con los 10 primeras filas del data.frame que contiene la bandera, tipo de embarcaión y total de horas</caption>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Flag</th>
-<th style="text-align: left;">Vessel.Type</th>
-<th style="text-align: right;">totHours</th>
+<th style="text-align: left;">Bandera</th>
+<th style="text-align: left;">Tipo de barco</th>
+<th style="text-align: right;">Horas totales</th>
 </tr>
 </thead>
 <tbody>
@@ -157,97 +160,13 @@ ul.task-list li input[type="checkbox"] {
 <td style="text-align: left;">OTHER</td>
 <td style="text-align: right;">32</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">DNK</td>
-<td style="text-align: left;">CARGO</td>
-<td style="text-align: right;">34</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">GBR</td>
-<td style="text-align: left;">CARGO</td>
-<td style="text-align: right;">15</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">GBR</td>
-<td style="text-align: left;">PASSENGER</td>
-<td style="text-align: right;">29</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">HKG</td>
-<td style="text-align: left;">CARGO</td>
-<td style="text-align: right;">97</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">JPN</td>
-<td style="text-align: left;">CARGO</td>
-<td style="text-align: right;">59</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">JPN</td>
-<td style="text-align: left;">FISHING</td>
-<td style="text-align: right;">51</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">LBR</td>
-<td style="text-align: left;">CARGO</td>
-<td style="text-align: right;">61</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">LBR</td>
-<td style="text-align: left;">OTHER</td>
-<td style="text-align: right;">45</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">MHL</td>
-<td style="text-align: left;">CARGO</td>
-<td style="text-align: right;">222</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">NOR</td>
-<td style="text-align: left;">CARGO</td>
-<td style="text-align: right;">48</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">NOR</td>
-<td style="text-align: left;">OTHER</td>
-<td style="text-align: right;">45</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">PAN</td>
-<td style="text-align: left;">CARGO</td>
-<td style="text-align: right;">383</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">PAN</td>
-<td style="text-align: left;">OTHER</td>
-<td style="text-align: right;">31</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">SGP</td>
-<td style="text-align: left;">CARGO</td>
-<td style="text-align: right;">86</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">TWN</td>
-<td style="text-align: left;">CARGO</td>
-<td style="text-align: right;">32</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">VUT</td>
-<td style="text-align: left;">CARGO</td>
-<td style="text-align: right;">66</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">VUT</td>
-<td style="text-align: left;">OTHER</td>
-<td style="text-align: right;">115</td>
-</tr>
 </tbody>
 </table>
 </div>
 </div>
 <section id="ahora-creamos-una-figura-o-gráfico" class="level3">
 <h3 class="anchored" data-anchor-id="ahora-creamos-una-figura-o-gráfico">Ahora creamos una figura o gráfico</h3>
+<p>En el espacio entre { } es donde se puede poner el título de la figura, que será la que aparezca debajo de esta en el documento del informe.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
