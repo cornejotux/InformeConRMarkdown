@@ -49,9 +49,9 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#informe-de-como-crear-informes" id="toc-informe-de-como-crear-informes" class="nav-link active" data-scroll-target="#informe-de-como-crear-informes">Informe de como crear informes</a>
   <ul class="collapse">
-  <li><a href="#este-es-un-título-nivel-2" id="toc-este-es-un-título-nivel-2" class="nav-link" data-scroll-target="#este-es-un-título-nivel-2">Este es un título nivel 2</a>
+  <li><a href="#análisis-de-barcos-en-zee-de-isla-de-pascua" id="toc-análisis-de-barcos-en-zee-de-isla-de-pascua" class="nav-link" data-scroll-target="#análisis-de-barcos-en-zee-de-isla-de-pascua">Análisis de barcos en ZEE de Isla de Pascua</a>
   <ul class="collapse">
-  <li><a href="#titulo-nivel-3" id="toc-titulo-nivel-3" class="nav-link" data-scroll-target="#titulo-nivel-3">titulo nivel 3</a></li>
+  <li><a href="#ahora-creamos-una-figura-o-gráfico" id="toc-ahora-creamos-una-figura-o-gráfico" class="nav-link" data-scroll-target="#ahora-creamos-una-figura-o-gráfico">Ahora creamos una figura o gráfico</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -90,49 +90,174 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>Loading required package: dplyr</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Attaching package: 'dplyr'</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>The following objects are masked from 'package:stats':
-
-    filter, lag</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>The following objects are masked from 'package:base':
-
-    intersect, setdiff, setequal, union</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Loading required package: ggplot2</code></pre>
-</div>
-</div>
 <section id="informe-de-como-crear-informes" class="level1">
 <h1>Informe de como crear informes</h1>
 <p>Este <em>documento</em> es un ejemplo creato en tiempo real, demostrando como usar <strong>RMarkdown</strong> para crear un informe.</p>
-<section id="este-es-un-título-nivel-2" class="level2">
-<h2 class="anchored" data-anchor-id="este-es-un-título-nivel-2">Este es un título nivel 2</h2>
-<ul>
-<li><p>Uno</p></li>
-<li><p>dos</p></li>
-<li><p>tres</p></li>
-<li></li>
-</ul>
-<section id="titulo-nivel-3" class="level3">
-<h3 class="anchored" data-anchor-id="titulo-nivel-3">titulo nivel 3</h3>
-<ol type="1">
-<li><p>Primero</p></li>
-<li><p>segundo</p></li>
-<li><p>tercero</p></li>
-</ol>
-<section id="titulo-nivel-4" class="level4">
-<h4 class="anchored" data-anchor-id="titulo-nivel-4">titulo nivel 4</h4>
-</section>
+<section id="análisis-de-barcos-en-zee-de-isla-de-pascua" class="level2">
+<h2 class="anchored" data-anchor-id="análisis-de-barcos-en-zee-de-isla-de-pascua">Análisis de barcos en ZEE de Isla de Pascua</h2>
+<p>Esta es una tabla resumen de las horas de presencia de embarcaciones por pais y tipo,</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Flag</th>
+<th style="text-align: left;">Vessel.Type</th>
+<th style="text-align: right;">totHours</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">BEL</td>
+<td style="text-align: left;">CARGO</td>
+<td style="text-align: right;">40</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BHS</td>
+<td style="text-align: left;">CARGO</td>
+<td style="text-align: right;">59</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BHS</td>
+<td style="text-align: left;">CARRIER</td>
+<td style="text-align: right;">22</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BMU</td>
+<td style="text-align: left;">PASSENGER</td>
+<td style="text-align: right;">48</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CHL</td>
+<td style="text-align: left;">OTHER</td>
+<td style="text-align: right;">2630</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CHL</td>
+<td style="text-align: left;">PASSENGER</td>
+<td style="text-align: right;">21</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CYM</td>
+<td style="text-align: left;">OTHER</td>
+<td style="text-align: right;">44</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CYM</td>
+<td style="text-align: left;">PASSENGER</td>
+<td style="text-align: right;">77</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">DEU</td>
+<td style="text-align: left;">CARGO</td>
+<td style="text-align: right;">42</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">DEU</td>
+<td style="text-align: left;">OTHER</td>
+<td style="text-align: right;">32</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">DNK</td>
+<td style="text-align: left;">CARGO</td>
+<td style="text-align: right;">34</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">GBR</td>
+<td style="text-align: left;">CARGO</td>
+<td style="text-align: right;">15</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">GBR</td>
+<td style="text-align: left;">PASSENGER</td>
+<td style="text-align: right;">29</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">HKG</td>
+<td style="text-align: left;">CARGO</td>
+<td style="text-align: right;">97</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">JPN</td>
+<td style="text-align: left;">CARGO</td>
+<td style="text-align: right;">59</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">JPN</td>
+<td style="text-align: left;">FISHING</td>
+<td style="text-align: right;">51</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">LBR</td>
+<td style="text-align: left;">CARGO</td>
+<td style="text-align: right;">61</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">LBR</td>
+<td style="text-align: left;">OTHER</td>
+<td style="text-align: right;">45</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">MHL</td>
+<td style="text-align: left;">CARGO</td>
+<td style="text-align: right;">222</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NOR</td>
+<td style="text-align: left;">CARGO</td>
+<td style="text-align: right;">48</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NOR</td>
+<td style="text-align: left;">OTHER</td>
+<td style="text-align: right;">45</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PAN</td>
+<td style="text-align: left;">CARGO</td>
+<td style="text-align: right;">383</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PAN</td>
+<td style="text-align: left;">OTHER</td>
+<td style="text-align: right;">31</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">SGP</td>
+<td style="text-align: left;">CARGO</td>
+<td style="text-align: right;">86</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TWN</td>
+<td style="text-align: left;">CARGO</td>
+<td style="text-align: right;">32</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">VUT</td>
+<td style="text-align: left;">CARGO</td>
+<td style="text-align: right;">66</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">VUT</td>
+<td style="text-align: left;">OTHER</td>
+<td style="text-align: right;">115</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<section id="ahora-creamos-una-figura-o-gráfico" class="level3">
+<h3 class="anchored" data-anchor-id="ahora-creamos-una-figura-o-gráfico">Ahora creamos una figura o gráfico</h3>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="informe_files/figure-html/grafico-1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Horas de presencia de embarcaciones por pais y tipo.</figcaption>
+</figure>
+</div>
+</div>
+</div>
 </section>
 </section>
 </section>
